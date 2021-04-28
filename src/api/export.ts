@@ -27,7 +27,6 @@ type Opts = {
 	oninfo?: ({ message }: { message: string }) => void;
 	onfile?: ({ file, size, status }: { file: string, size: number, status: number }) => void;
 	entry?: string;
-	exclude?: string;
 };
 
 type Ref = {
@@ -87,8 +86,7 @@ async function _export({
 	concurrent = 8,
 	oninfo = noop,
 	onfile = noop,
-	entry = '/',
-	exclude = ''
+	entry = '/ exclude:[]'
 }: Opts = {}) {
 	basepath = basepath.replace(/^\//, '');
 
