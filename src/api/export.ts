@@ -316,7 +316,7 @@ async function _export({
 			try {
 				for (const entryPoint of entryPoints) {
 					oninfo({
-						message: `Crawling ${entryPoint.href}`
+						message: `Crawwling ${entryPoint.href}`
 					});
 					handle(entryPoint, queueFetchOpts, queue.add);
 				}
